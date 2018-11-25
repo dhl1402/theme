@@ -8,7 +8,11 @@ import { StyleSheet } from "react-native";
 import Theme, { ThemeShape } from "./Theme";
 import { resolveComponentStyle } from "./resolveComponentStyle";
 
-const themeCache = {};
+let themeCache = {};
+
+export const clearCache = () => {
+  themeCache = {};
+}
 
 /**
  * Formats and throws an error when connecting component style with the theme.
